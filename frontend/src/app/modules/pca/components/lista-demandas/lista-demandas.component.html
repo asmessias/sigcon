@@ -1,0 +1,9 @@
+<h2>Demandas (PCA)</h2>
+
+<ul>
+  <li *ngFor="let d of demandas">
+    <strong>{{ d.descricao }}</strong><br />
+    Valor estimado: {{ d.valor_estimado }}<br />
+    Status: {{ d.status }}
+  </li>
+</ul>

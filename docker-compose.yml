@@ -1,10 +1,10 @@
-version: "3.8"
-
 services:
   backend:
+    ports:
+      -"8000:8000"
     build:
       context: ./docker/php
-    container_name: sigcon-backend
+    container_name: backend
     volumes:
       - ./backend:/var/www/html
     working_dir: /var/www/html
