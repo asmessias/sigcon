@@ -1,16 +1,18 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Demanda } from '../../../shared/models/demanda.model';
-import { ApiService } from '../../../core/services/api.service';
+import { Demanda } from '../models/demanda.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DemandaService {
 
-  constructor(private api: ApiService) {}
+  private readonly API_URL = '/api/v1/demandas';
 
-  listar(): Observable<Demanda[]> {
-    return this.api.get<Demanda[]>('demandas');
+  constructor(private http: HttpClient) {}
+
+  listarDemandas(): Observable<Demanda[]> {
+    return this.http.get<Demanda[]>(this.API_URL);
   }
 }

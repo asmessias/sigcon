@@ -1,9 +1,32 @@
-<h2>Demandas (PCA)</h2>
+<h1>Demandas (PCA)</h1>
 
-<ul>
-  <li *ngFor="let d of demandas">
-    <strong>{{ d.descricao }}</strong><br />
-    Valor estimado: {{ d.valor_estimado }}<br />
-    Status: {{ d.status }}
-  </li>
-</ul>
+<div *ngIf="carregando">
+  Carregando demandas...
+</div>
+
+<div *ngIf="erro">
+  Erro ao carregar demandas.
+</div>
+
+<table *ngIf="!carregando && !erro && demandas.length > 0">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Objeto</th>
+      <th>Status</th>
+      <th>Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let d of demandas">
+      <td>{{ d.id_demanda }}</td>
+      <td>{{ d.objeto }}</td>
+      <td>{{ d.status }}</td>
+      <td>{{ d.valor_estimado | currency:'BRL' }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="!carregando && !erro && demandas.length === 0">
+  Nenhuma demanda encontrada.
+</div>

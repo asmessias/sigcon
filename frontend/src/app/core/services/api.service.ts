@@ -12,4 +12,5 @@ export class ApiService {
   get<T>(endpoint: string) {
     return this.http.get<T>(`${environment.apiUrl}/${endpoint}`);
   }
+
 }
