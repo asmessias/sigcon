@@ -1,6 +1,16 @@
--- =====================================================
--- SIGCON - Funções de Regras de Negócio (CGPAR)
--- =====================================================
+-- =========================================================
+-- Projeto: SIGCON
+-- Fase: 9 – Estratégia de Versionamento e Seeds
+-- Tipo: Migration
+-- Arquivo: V006__funcoes_negocio.sql
+-- Data: 2026-01-07
+-- Descrição:
+--   Criação de funções de negócio em PL/pgSQL.
+-- =========================================================
+
+-- =========================================
+-- Funções de negócio
+-- =========================================
 
 -- 1) Histórico automático de status
 CREATE OR REPLACE FUNCTION fn_registrar_historico_status()

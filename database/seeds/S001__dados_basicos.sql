@@ -1,6 +1,15 @@
--- =====================================================
--- SIGCON - Dados iniciais
--- =====================================================
+-- =========================================================
+-- Projeto: SIGCON
+-- Fase: 9 – Estratégia de Versionamento e Seeds
+-- Tipo: Seed
+-- Arquivo: S001__dados_basicos.sql
+-- Data: 2026-01-07
+-- Descrição:
+--   Carga inicial de dados estruturantes:
+--   - perfis
+--   - ciclos PCA
+--   - status iniciais
+-- =========================================================
 
 INSERT INTO orgao (nome, sigla)
 VALUES ('Companhia Nacional de Abastecimento', 'CONAB');

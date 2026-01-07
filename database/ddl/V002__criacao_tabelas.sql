@@ -1,6 +1,16 @@
--- =====================================================
--- SIGCON - Tabelas do MVP
--- =====================================================
+-- =========================================================
+-- Projeto: SIGCON
+-- Fase: 9 – Estratégia de Versionamento e Seeds
+-- Tipo: Migration
+-- Arquivo: V002__criacao_tabelas.sql
+-- Data: 2026-01-07
+-- Descrição:
+--   Criação das tabelas do domínio do SIGCON.
+-- =========================================================
+
+-- =========================================
+-- Criação das tabelas principais
+-- =========================================
 
 CREATE TABLE orgao (
     id_orgao        BIGSERIAL PRIMARY KEY,

@@ -1,6 +1,16 @@
--- =====================================================
--- SIGCON - Triggers
--- =====================================================
+-- =========================================================
+-- Projeto: SIGCON
+-- Fase: 9 – Estratégia de Versionamento e Seeds
+-- Tipo: Migration
+-- Arquivo: V007__triggers_controle.sql
+-- Data: 2026-01-07
+-- Descrição:
+--   Criação de triggers de controle, auditoria e validação.
+-- =========================================================
+
+-- =========================================
+-- Triggers de controle
+-- =========================================
 
 -- 1) Histórico automático de status
 CREATE TRIGGER trg_historico_status
